@@ -1,0 +1,31 @@
+## Environment SPEC
+version: "3.8"
+
+services:
+
+  environment-spec:
+    container_name: environment-spec
+    image: environment-spec
+    labels:
+      environment-spec: "environment-spec"
+    build: .
+    volumes:
+      - .:/usr/local/environment-spec
+    env_file:
+      - ./.env
+    environment:
+      NODE_ENV: development
+    command: npm run development
+    networks:
+      - environment-spec
+    restart: always
+    ports:
+      - 9000:9000
+
+volumes:
+  environment-spec:
+    name: environment-spec
+networks:
+  environment-spec:
+    name: environment-spec
+    driver: bridge
