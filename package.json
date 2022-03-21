@@ -18,7 +18,11 @@
   },
   "homepage": "https://github.com/lucasfrct/qgx-spec#readme",
   "dependencies": {
+    "@fnando/cnpj": "^1.0.2",
+    "@fnando/cpf": "^1.0.2",
     "cypress": "^9.5.2",
-    "jest": "^27.5.1"
+    "jest": "^27.5.1",
+    "libphonenumber-js": "^1.9.50",
+    "uk-phone-number-generator": "^1.0.1"
   }
 }
